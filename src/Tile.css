@@ -1,0 +1,16 @@
+.Tile {
+  border: 1px solid #bfa89e;
+  background-color: #bfa89e;
+}
+
+.Tile__background {
+  height: 100px;
+  width: 100px;
+}
+
+.Tile__counter {
+  position: relative;
+  margin-top: -84px;
+  font-size: 40px;
+  font-weight: bold;
+}
