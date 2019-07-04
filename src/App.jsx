@@ -5,9 +5,9 @@ import { Tile } from './Tile';
 const tileCount = 50;
 
 function renderTiles() {
-  const tiles = Array.from({ length: tileCount }).map((val, index) => {
-    return <Tile key={index} />;
-  });
+  const tiles = Array.from({ length: tileCount }).map((val, index) => (
+    <Tile key={index} />
+  ));
   return tiles;
 }
 

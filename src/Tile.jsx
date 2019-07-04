@@ -35,7 +35,7 @@ function Counter() {
   useInterval(() => {
     const newCount = count > 500 ? 0 : count + 1;
     setCount(newCount);
-  }, getRandomInt(50, 250));
+  }, getRandomInt(40, 160));
 
   return <div className={'Tile__counter'}>{count}</div>;
 }
