@@ -6,7 +6,7 @@ export function Tile() {
   return (
     <div className={'Tile'}>
       <Background />
-      <Counter />
+      <Counter delay={100} />
     </div>
   );
 }
@@ -16,7 +16,15 @@ function Background() {
     <svg className={'Tile__background'}>
       <defs>
         <filter id="shadow">
-          <feDropShadow dx="3" dy="6" stdDeviation="4" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+          <feOffset dx="10" dy="10" result="offsetBlur" />
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.15" />
+          </feComponentTransfer>
+          <feMerge>
+            <feMergeNode />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
         </filter>
       </defs>
       <polygon
@@ -35,14 +43,7 @@ function Counter() {
   useInterval(() => {
     const newCount = count > 500 ? 0 : count + 1;
     setCount(newCount);
-  }, getRandomInt(40, 160));
+  }, 100);
 
   return <div className={'Tile__counter'}>{count}</div>;
-}
-
-//  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
 }
