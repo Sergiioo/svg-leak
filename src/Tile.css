@@ -4,13 +4,31 @@
 }
 
 .Tile__background {
+  background-color: #78a1bb;
   height: 100px;
   width: 100px;
 }
 
+.Tile__background--shadow {
+  filter: drop-shadow(10px 10px 10px #283040);
+}
+
+.Tile__background--clipped {
+  clip-path: polygon(
+    30% 5%,
+    70% 5%,
+    95% 30%,
+    95% 70%,
+    70% 95%,
+    30% 95%,
+    5% 70%,
+    5% 30%
+  );
+}
+
 .Tile__counter {
   position: relative;
-  margin-top: -84px;
+  margin-top: -100px;
   font-size: 40px;
   font-weight: bold;
 }
