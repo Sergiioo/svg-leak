@@ -3,13 +3,13 @@
   "startup_app": {
     "name": "OpenfinPOC",
     "description": "OpenFin POC",
-    "url": "http://localhost:3000",
-    "uuid": "OpenfinPOC-0gi4vcykd7i9",
+    "url": "http://localhost:5000",
+    "uuid": "OpenfinPOC-0gi4vcykd7i1",
     "autoShow": true
   },
   "runtime": {
     "arguments": "",
-    "version": "stable"
+    "version": "stable-v9"
   },
   "shortcut": {
     "company": "OpenFin",
