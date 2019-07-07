@@ -14,19 +14,6 @@ export function Tile() {
 function Background() {
   return (
     <svg className={'Tile__background'}>
-      <defs>
-        <filter id="shadow">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-          <feOffset dx="10" dy="10" result="offsetBlur" />
-          <feComponentTransfer>
-            <feFuncA type="linear" slope="0.15" />
-          </feComponentTransfer>
-          <feMerge>
-            <feMergeNode />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
       <polygon
         stroke="#28304"
         points="90,67 67,90 32,90 8,67 8,32 32,8 67,8 90,32"
