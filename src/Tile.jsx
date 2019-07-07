@@ -13,7 +13,7 @@ export function Tile() {
 
 function Background() {
   return (
-    <div className={'Tile__background--shadow'}>
+    <div>
       <div className={'Tile__background Tile__background--clipped'}></div>
     </div>
   );

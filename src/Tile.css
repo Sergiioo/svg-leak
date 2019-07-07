@@ -9,10 +9,6 @@
   width: 100px;
 }
 
-.Tile__background--shadow {
-  filter: drop-shadow(10px 10px 10px #283040);
-}
-
 .Tile__background--clipped {
   clip-path: polygon(
     30% 5%,
